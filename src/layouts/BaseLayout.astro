@@ -5,6 +5,7 @@ import "../styles/normalize.css";
 import "../styles/global.css";
 
 const { pageTitle } = Astro.props;
+const { heroClass } = Astro.props;
 const heroIngress = "This is a hero ingress text";
 ---
 
@@ -33,12 +34,15 @@ const heroIngress = "This is a hero ingress text";
 	<body>
 		<Header />
 		<div id="wrapper">
-			<section id="hero">
+			<section id="hero" class={heroClass}>
 				<h1 class="hero-title">{pageTitle}</h1>
 				<p class="hero-ingress">{heroIngress}</p>
 			</section>
-            <slot />
+			<slot />
 		</div>
 		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>

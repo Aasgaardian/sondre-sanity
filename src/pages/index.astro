@@ -1,28 +1,12 @@
 ---
-import '../styles/normalize.css';
-import '../styles/global.css';
-import BaseLayout from '../';
-const pageTitle = "Frontpage";
+import "../styles/normalize.css";
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Home";
+const heroClass = "home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<BaseLayout pageTitle={Frontpage}>
-			<h2>My awesome blog subtitle</h2>
-		</BaseLayout>
-	<script>
-	    import "../scripts/menu.js";
-	</script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<h2>My awesome blog subtitle</h2>
+</BaseLayout>
+
