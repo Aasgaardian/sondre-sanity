@@ -1,0 +1,44 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/normalize.css";
+import "../styles/global.css";
+
+const { pageTitle } = Astro.props;
+const heroIngress = "This is a hero ingress text";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+			integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+			crossorigin="anonymous"></script>
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header />
+		<div id="wrapper">
+			<section id="hero">
+				<h1 class="hero-title">{pageTitle}</h1>
+				<p class="hero-ingress">{heroIngress}</p>
+			</section>
+            <slot />
+		</div>
+		<Footer />
+	</body>
+</html>

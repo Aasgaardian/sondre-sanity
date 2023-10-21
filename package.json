@@ -10,6 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.3.2"
+    "@astrojs/react": "^3.0.3",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "@types/react-leaflet": "^3.0.0",
+    "astro": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
