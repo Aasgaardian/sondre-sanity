@@ -1,3 +1,12 @@
+
+/* start - clean up zone */
+
+/* end - clean up zone */
+
+
+
+
+
 /* start - root and global rules */
 :root {
 	font-size: 16px;
@@ -24,6 +33,8 @@
 
 /* start - header */
 header {
+	position: fixed;
+	width: 100%;
 	background: yellow;
 	height: var(--header-height);
 	padding: 0 1rem;
@@ -221,17 +232,65 @@ header nav {
 	width: 100%;
 	height: 100%;
 	display: grid;
-	row-gap: 2rem;
 }
 
 section {
 	width: 100%;
-	height: calc(100vh - var(--header-height));
 	background: red;
+	padding: 4rem 1.5rem;
+}
+section.no-vertical-padding {
+	padding: 0rem 1.5rem;
+}
+section.small-vertical-padding {
 	padding: 2rem 1.5rem;
 }
+section.large-vertical-padding {
+	padding: 6rem 1.5rem;
+}
+section.xl-vertical-padding {
+	padding: 8rem 1.5rem;
+}
 
+@media (max-width: 600px) {
+	section {
+		padding: 2rem 1.5rem;
+	}
+	section.no-vertical-padding {
+		padding: 0rem 1.5rem;
+	}
+	section.small-vertical-padding {
+		padding: 1rem 1.5rem;
+	}
+	section.large-vertical-padding {
+		padding: 3rem 1.5rem;
+	}
+	section.xl-vertical-padding {
+		padding: 4rem 1.5rem;
+	}
+}
 /* end - containers and sections */
+
+/* #################################### */
+
+/* start - hero section */
+#hero {
+	margin-top: var(--header-height);
+	height: calc(80vh - var(--header-height));
+	background-color: royalblue;
+}
+
+#hero.home-hero {
+	background: url('../media/img/hero/home.jpeg') royalblue;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 4rem 1.5rem;
+	background-position: center center;
+	color: #fff;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+}
+/* end - hero section */
 
 /* #################################### */
 

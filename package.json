@@ -10,12 +10,21 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^3.0.3",
+    "@astrojs/preact": "^3.0.1",
     "@astrojs/react": "^3.0.3",
+    "@astrojs/rss": "^3.0.0",
+    "@sanity/astro": "^2.1.2",
+    "@sanity/client": "^6.7.0",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
     "@types/react-leaflet": "^3.0.0",
     "astro": "^3.3.2",
+    "preact": "^10.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-astro": "^0.12.0"
   }
 }
